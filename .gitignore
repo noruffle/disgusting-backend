@@ -1,5 +1,3 @@
-node_modeules/
+node_modules/
 .archive/
-
-**/app/node_modeules/**
-**/app/.archive/**
+public/
