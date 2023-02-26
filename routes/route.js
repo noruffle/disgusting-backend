@@ -2,6 +2,7 @@
 const express = require('express')
 const router = express.Router()
 
+
 /** Routes */
 /* Main page */
 router.get('/', (req, res, next) => {
@@ -33,5 +34,26 @@ router.get('/manga/read', (req, res, next) => {
     title: 'Reading manga'
   });
 });
+
+router.get('/api/products', (req, res, next) => {
+  res.json([[
+    {
+      id: 1,
+      name: 'Ruffle'
+    },
+    {
+      id: 2,
+      name: 'Souffle'
+    },
+    {
+      id: 3,
+      name: 'Anime'
+    },
+    {
+      id: 4,
+      name: 'Manga'
+    }
+  ]])
+})
 
 module.exports = router;
