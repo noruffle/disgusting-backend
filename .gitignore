@@ -1,2 +1,5 @@
-# node_modeules
-# .archive
+node_modeules/
+.archive/
+
+**/app/node_modeules/**
+**/app/.archive/**
