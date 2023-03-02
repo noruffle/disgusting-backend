@@ -2,38 +2,53 @@
 const express = require('express')
 const router = express.Router()
 
+const Title = 'disgusting -';
 
 /** Routes */
 /* Main page */
 router.get('/', (req, res, next) => {
   res.render('home', {
-    title: 'Home',
+    title: `${Title} Home`,
   });
 });
 
 router.get('/anime', (req, res, next) => {
   res.render('con-anime', {
-    title: 'Anime corner'
+    title: `${Title} Anime corner`
   });
 })
 
 router.get('/anime/watch', (req, res, next) => {
   res.render('con-watch', {
-    title: 'Watching anime'
+    title: `${Title} Watching anime`
   });
 });
 
 router.get('/manga', (req, res, next) => {
   res.render('con-manga', {
-    title: 'Manga corner'
+    title: `${Title} Manga corner`
   });
 });
 
 router.get('/manga/read', (req, res, next) => {
   res.render('con-read', {
-    title: 'Reading manga'
+    title: `${Title} Reading manga`
   });
 });
+
+/* Calculator page */
+router.get('/calc', (req, res) => {
+  res.render('con-calc', {
+    title: `${Title} Calculator`
+})
+});
+
+router.get('path', (req, res) => {
+
+});
+
+
+/* Test */
 
 router.get('/api/products', (req, res, next) => {
   res.json([[

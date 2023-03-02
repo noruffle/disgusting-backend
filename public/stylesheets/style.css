@@ -1,17 +1,12 @@
-:root {
-  --background-color-dark: #252525;
-  --baclground-color-wall: #4b4b4b;
-  --text-color: rgba(255, 255, 255, .86);
-  --text-color-hover: purple;
-  --font-family-base: "Inter var", "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --ff-spec: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
-}
-
 body {
+  display: flex;
+  flex-direction: column;
   margin: 0;
-  background-color: var(--background-color-wall);
-  width: 100%;
+  background-image: var(--bg-image);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
 }
 
 header {
@@ -21,18 +16,18 @@ header {
 
 .nav {
   height: 50px;
-  border-bottom: 1px solid #e1e1e12d;
+  border-bottom: 1px solid var(--line-c);
 }
 
 .menu {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 10px;
 }
 
-.nav a {
+.nav .vt-flyout-button {
   display: block;
-  margin-top: 12px;
+  padding: 15px 10px;
   text-decoration: none;
   color: var(--text-color);
   font-size: 16px;
@@ -49,16 +44,26 @@ header {
 }
 
 .content {
-  margin: 0 20%;
-  height: 94vh;
+  margin: 15px 20%;
+  height: 1000px;
   display: flex;
+  flex: auto;
   justify-content: center;
-  border-left: 1px solid #e1e1e12d;
-  border-right: 1px solid #e1e1e12d;
+  border-left: 1px solid var(--line-c);
+  border-right: 1px solid var(--line-c);
+  border-radius: 20px;
   background-color: var(--background-color-dark);
 }
 
 .content > h2 {
   color: var(--text-color);
   font-family: var(--ff-spec);
+}
+
+.footer {
+  background-color: var(--background-color-dark);
+  color: var(--text-color);
+  height: 50px;
+  border-top: 1px solid var(--line-c);
+  flex-shrink: 0;
 }

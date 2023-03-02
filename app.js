@@ -7,7 +7,7 @@ const mainRoutes = require('./routes/route'),
   downloadingRoutes = require('./routes/route-download');
 
 /* Joining middleware */
-const apiMiddleware = require('./middleware/api-key.js')
+const apiMiddleware = require('./middleware/api-password.js')
 
 /** Install stylesheet ejs */
 app.set('view engine', 'ejs');
@@ -21,7 +21,7 @@ app.use(express.static(__dirname + '/public'));
 
 /* Middleware */
 /* Password: /?pass=slojno */
-app.use(apiMiddleware);
+// app.use(apiMiddleware);
 
 /* Routes */
 app.use(mainRoutes);
