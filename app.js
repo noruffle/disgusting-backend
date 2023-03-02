@@ -20,8 +20,7 @@ app.use(express.static(__dirname + '/public'));
 
 
 /* Middleware */
-/* Password: http://localhost:3000/manga?api_key=12345
-Because: /middleware/api-key.js */
+/* Password: /?pass=slojno */
 app.use(apiMiddleware);
 
 /* Routes */

@@ -1,10 +1,10 @@
 function apikey(req, res, next) {
 
-  const apiKey = '12345';
+  const password = 'slojno';
 
-  console.log(req.query.api_key);
+  console.log(req.query.pass);
 
-  if (req.query.api_key && (req.query.api_key === apiKey)) {
+  if (req.query.pass && (req.query.pass === password)) {
     next();
     
   } else {
