@@ -16,6 +16,7 @@ header {
 
 .nav {
   height: 50px;
+  color: var(--text-color);
   border-bottom: 1px solid var(--line-c);
 }
 
@@ -24,8 +25,8 @@ header {
   justify-content: center;
   gap: 10px;
 }
-
-.nav .vt-flyout-button {
+/* 
+.nav .def {
   display: block;
   padding: 15px 10px;
   text-decoration: none;
@@ -34,14 +35,14 @@ header {
   transition: .3s;
   opacity: .9;
 }
-
-.nav:hover a {
+*/
+.nav:hover a, .a {
   opacity: .25;
 }
 
-.nav a:hover {
+.nav a:hover, .a:hover {
   opacity: 1;
-}
+} 
 
 .content {
   margin: 15px 20%;

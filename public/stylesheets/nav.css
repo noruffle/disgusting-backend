@@ -57,7 +57,7 @@ button, input, optgroup, select, textarea {
   border: 1px solid var(--line-c);
   border-radius: 15px;
   top: calc(75px / 2 + 15px);
-  left: calc(-26px * 2 - 15px);
+  left: calc(-18px * 2 - 15px);
   opacity: 0;
   visibility: hidden;
   transform: translateY(-4px);
@@ -73,8 +73,8 @@ button, input, optgroup, select, textarea {
 .vt-menu {
   border-radius: 8px;
   padding: 12px 0;
-  min-width: 192px;
-  border: 1px solid transparent;
+  min-width: 150px;
+  border: inherit;
   background: var(--background-color-dark);
   box-shadow: white;
   transition: background-color .5s;
