@@ -1,0 +1,14 @@
+.footer {
+
+  /* Position */
+  flex-shrink: 0;
+
+  /* Properties */
+  height: 50px;
+
+  /* Color */
+  color: var(--text-color);
+  border-top: 1px solid var(--line-c);
+  background-color: var(--background-color-dark);
+
+}

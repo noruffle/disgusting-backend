@@ -1,0 +1,73 @@
+.menu__flyout {
+
+  /* Position */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+  /* Fonts */
+  font-size: 16px;
+  
+  /* Properties */
+  gap: 35px;
+  height: 50px;
+  padding: 0 21%;
+  
+  /* Color */
+  opacity: .9;
+  color: var(--text-color);
+  border-bottom: 1px solid var(--line-c);
+  background-color: var(--background-color-dark);
+
+  /* Transformation */
+  transition: .3s;
+
+}
+
+.menu__flyout:hover .menu__flyout__link {
+  
+  /* Color */
+  opacity: .25;
+
+}
+
+.menu__flyout .menu__flyout__link:hover {
+
+  /* Color */
+  opacity: 1;
+
+}
+
+.content {
+
+  /* Position */
+  display: grid;
+  margin: 15px 20%;
+  place-items: center;
+
+  /* Fonts */
+  font-family: var(--ff-spec);
+
+  /* Properties */
+  height: 1000px;
+
+  /* Color */
+  color: var(--text-color);
+  border-left: 1px solid var(--line-c);
+  border-right: 1px solid var(--line-c);
+  background-color: var(--background-color-dark);
+
+  /* Transformation */
+  border-radius: 20px;
+
+}
+
+.content > h2 {
+  
+  /* Fonts */
+  font-family: inherit;
+
+  /* Color */
+  color: inherit;
+  
+}

@@ -1,44 +1,44 @@
 <body>
   
-<header>
-  <nav class="nav">
-    <div class="menu">
-      <a class="vt-flyout-button" href="/">Home</a>
+<div class="menu__flyout">
+  <!-- Watch -->
+  <a class="menu__flyout__link" href="/anime/watch">Watch</a>
 
-      <!--  -->
-      <div class="vt-flyout nav-bar-menu-group">
-        <button type="button" class="vt-flyout-button">
-          <span class="vt-flyout-button a" aria-haspopup="true" aria-expanded="true">
-            Anime
-          </span>
-        </button>
-      
-        <!-- flyout -->
-        <div class="vt-flyout-menu">
-          <div class="vt-menu">
-            <div class="vt-menu-items">
-              <!--  -->
-              <!--  -->
-              <div class="vt-menu-group">
-                <p class="vt-menu-title">Anime</p>
-                <!--  -->
-                <!--  -->
-                <a class="vt-link link vt-menu-link" href="/anime">Anime Search</a>
-                <a class="vt-link link vt-menu-link" href="/anime">Top Anime</a>
-                <a class="vt-link link vt-menu-link" href="/anime">Seasonal Anime</a>
-                <a class="vt-link link vt-menu-link" href="/anime">Videos</a>
-                <a class="vt-link link vt-menu-link" href="/anime">Reviews</a>
-                <a class="vt-link link vt-menu-link" href="/anime">Recommendations</a>
-              </div>
-            </div>
-          </div>
-        </div>
+  <!-- Anime -->
+  <div class="flyout__group">
+    <button class="menu__flyout__button" type="button">
+      <a class="menu__flyout__link" href="/anime">Anime</a>
+      <div class="flyout__group__menu">
+        <p class="flyout__title">Anime</p>
+          <a class="flyout__list" href="/anime">Anime Search</a>
+          <a class="flyout__list" href="/anime">Top Anime</a>
+          <a class="flyout__list" href="/anime">Seasonal Anime</a>
+          <a class="flyout__list" href="/anime">Videos</a>
+          <a class="flyout__list" href="/anime">Reviews</a>
+          <a class="flyout__list" href="/anime">Recommendations</a>
       </div>
+    </button>
+  </div>
+   
+  <!-- Home -->
+  <a class="menu__flyout__link" href="/">Home</a>
 
-      <!--  -->
-      <a class="vt-flyout-button" href="/manga">Manga</a>
-      <a class="vt-flyout-button" href="/anime/watch">Watch</a>
-      <a class="vt-flyout-button" href="/manga/read">Read</a>
-    </div>
-  </nav>
-</header>
+  <!-- Manga -->
+  <div class="flyout__group">
+    <button class="menu__flyout__button" type="button">
+      <a class="menu__flyout__link" href="/manga">Manga</a>
+      <div class="flyout__group__menu">
+        <p class="flyout__title">Manga</p>
+          <a class="flyout__list" href="/anime">Manga Search</a>
+          <a class="flyout__list" href="/anime">Top Manga</a>
+          <a class="flyout__list" href="/anime">Seasonal Manga</a>
+          <a class="flyout__list" href="/anime">Store</a>
+          <a class="flyout__list" href="/anime">Reviews</a>
+          <a class="flyout__list" href="/anime">Recommendations</a>
+      </div>
+    </button>
+  </div>
+
+  <!-- Read -->
+  <a class="menu__flyout__link" href="/manga/read">Read</a>
+</div>

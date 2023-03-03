@@ -1,0 +1,23 @@
+body {
+  /* Position */
+  display: flex;
+  flex-direction: column;
+  
+  /* Properties */
+  margin: 0;
+  height: 100vh;
+  
+  /* Fonts */
+  font-family: var(--ff-spec);
+  
+  /* Background */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: var(--bg-image);
+}
+
+a {
+  /* Text Decoration */
+  text-decoration: inherit;
+}

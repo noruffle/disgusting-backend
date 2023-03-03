@@ -1,0 +1,129 @@
+.menu__flyout__link {
+
+  /* Position */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  /* Fonts */
+  font-family: var(--ff-spec);
+  color: inherit;
+}
+
+.flyout__group:hover {
+  
+  /* Color */
+  color: var(--text-color);
+  
+  /* Transform */
+  transition: color .25s;
+}
+
+.flyout__group:hover .flyout__group__menu{
+
+  /* Color */
+  opacity: 1;
+  visibility: visible;
+
+  /* Transformation */
+  transform: translateY(0);
+
+}
+
+.flyout__group {
+
+  /* Position */
+  position: relative;
+
+}
+
+.menu__flyout__button {
+
+  /* Position */
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+
+  /* Fonts */
+  font-family: var(--ff-spec);
+  font-size: inherit;
+
+  /* Color */
+  color: var(--text-color);
+  background-color: transparent;
+
+  /* Border */
+  border: 0;
+
+  /* Transformation */
+  transition: color .5s;
+}
+
+.flyout__group__menu {
+
+  /* Position */
+  position: absolute;
+  padding: 0 0 20px 0;
+  top: calc(75px / 2 + 15px);
+  left: calc(-18px * 2 - 15px);
+
+  /* Color */
+  opacity: 0;
+  min-width: 125px;
+  border: 1px solid var(--line-c);
+  background: var(--background-color-dark);
+  
+  /* Transformation */
+  visibility: hidden;
+  border-radius: 15px;
+  transform: translateY(-4px);
+  transition: opacity .25s,
+              visibility .25s,
+              transform .25s,
+              background-color .5s;
+}
+
+.flyout__title {
+  
+  /* Position */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Fonts */
+  font-size: 14px;
+  font-weight: 600px;
+  font-family: var(--ff-spec);
+
+  /* Color */
+  color: var(--vt-c-text-3);
+
+  /* Transformation */
+  transition: color .25s;
+  text-transform: uppercase;
+
+}
+
+.flyout__list {
+
+  /* Position */
+  display: grid;
+  padding: 0 15px;
+  place-items: center;
+
+  /* Fonts */
+  font-size: 13px;
+  font-weight: 600px;
+  font-family: inherit;
+
+  /* Color */
+  color: inherit;
+  
+  /* Space between column */
+  line-height: 28px;
+  
+  /* Transformation */
+  white-space: nowrap;
+  transition: color .25s;
+
+}
