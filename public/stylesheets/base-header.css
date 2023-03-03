@@ -19,7 +19,7 @@
   transition: color .25s;
 }
 
-.flyout__group:hover .flyout__group__menu{
+.flyout__group:hover .flyout__group__menu {
 
   /* Color */
   opacity: 1;
@@ -87,8 +87,8 @@
   
   /* Position */
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 
   /* Fonts */
   font-size: 14px;
