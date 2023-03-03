@@ -1,0 +1,34 @@
+.content {
+
+  /* Position */
+  flex: 1;
+  margin: 15px 20%;
+  
+  padding: 50px;
+
+  /* Fonts */
+  font-family: var(--ff-spec);
+
+  /* Properties */
+  height: 1000px;
+
+  /* Color */
+  color: var(--text-color);
+  border-left: 1px solid var(--line-c);
+  border-right: 1px solid var(--line-c);
+  background-color: var(--background-color-dark);
+
+  /* Transformation */
+  border-radius: 20px;
+
+}
+
+.content > h2 {
+  
+  /* Fonts */
+  font-family: inherit;
+
+  /* Color */
+  color: inherit;
+  
+}

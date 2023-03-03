@@ -18,6 +18,9 @@ app.set('port', process.env.PORT || 3000);
 /** Static */
 app.use(express.static(__dirname + '/public'));
 
+/* Gives us to get JSON data */
+app.use(express.urlencoded({extended: true}))
+
 
 /* Middleware */
 /* Password: /?pass=slojno */

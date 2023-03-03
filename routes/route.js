@@ -1,6 +1,9 @@
 /* This is allowing us to create router in another file */
+const { response } = require('express');
 const express = require('express')
 const router = express.Router()
+const https = require('https');
+const { type } = require('os');
 
 const Title = 'disgusting -';
 
@@ -40,12 +43,20 @@ router.get('/manga/read', (req, res, next) => {
 router.get('/calc', (req, res) => {
   res.render('con-calc', {
     title: `${Title} Calculator`
+  });
+});
+
+router.post('/calc', (req, res) => {
+  
+  const num1 = Number(req.body.num1)
+  const num2 = Number(req.body.num2)
+  const sum = (a, b) => a + b
+
+  const answer = sum(num1, num2)
+
+  res.write(`<h1>Your sum is: ${answer}</h1>`)
+  res.send()
 })
-});
-
-router.get('path', (req, res) => {
-
-});
 
 
 /* Test */

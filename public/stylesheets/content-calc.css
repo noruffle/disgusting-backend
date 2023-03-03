@@ -1,0 +1,10 @@
+form {
+
+  /* Position */
+  display: grid;
+  place-items: center;
+
+  /* Fonts */
+  font-family: var(--ff-spec);
+
+}
