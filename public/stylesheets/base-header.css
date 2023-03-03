@@ -2,12 +2,13 @@
 
   /* Position */
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-around;
 
   /* Fonts */
-  font-family: var(--ff-spec);
   color: inherit;
+  font-family: var(--ff-spec);
+
 }
 
 .flyout__group:hover {
