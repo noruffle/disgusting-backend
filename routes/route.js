@@ -1,9 +1,7 @@
 /* This is allowing us to create router in another file */
-const { response } = require('express');
 const express = require('express')
 const router = express.Router()
 const https = require('https');
-const { type } = require('os');
 
 const Title = 'disgusting -';
 
@@ -81,5 +79,6 @@ router.get('/api/products', (req, res, next) => {
     }
   ]])
 })
+
 
 module.exports = router;

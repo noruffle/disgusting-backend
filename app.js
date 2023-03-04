@@ -6,6 +6,8 @@ const mainRoutes = require('./routes/route'),
   errorRoutes = require('./routes/route-error'),
   downloadingRoutes = require('./routes/route-download');
 
+const dbUsers = require('./routes/route-users.js');
+
 /* Joining middleware */
 const apiMiddleware = require('./middleware/api-password.js')
 
@@ -19,7 +21,10 @@ app.set('port', process.env.PORT || 3000);
 app.use(express.static(__dirname + '/public'));
 
 /* Gives us to get JSON data */
-app.use(express.urlencoded({extended: true}))
+/* app.use(express.urlencoded({extended: true})) */
+app.use(express.json())
+app.use(dbUsers);
+
 
 
 /* Middleware */
@@ -30,6 +35,8 @@ app.use(express.urlencoded({extended: true}))
 app.use(mainRoutes);
 app.use(errorRoutes);
 app.use(downloadingRoutes);
+
+
 
 /** Server Listening */
 app.listen(
