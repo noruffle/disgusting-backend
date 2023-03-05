@@ -2,9 +2,9 @@ function apipassword(req, res, next) {
 
   const logName = 'Ruffle' && 'ruffle';
 
-  /* /?u='ruffle' */
+  /* /?u='ruffle'
   console.log(req.query.u);
-
+  
   if (req.query.u && (req.query.u === logName)) {
     next();
     
@@ -13,9 +13,7 @@ function apipassword(req, res, next) {
       msg: 'Please log-in'
     }
     )
-  }
-
-
+  } */
 }
 
 module.exports = apipassword;

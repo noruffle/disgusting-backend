@@ -1,45 +1,31 @@
-/** Install Express and creating server (app) */
-const express = require('express');
-const path = require('path');
+const express = require("express");
+const config = require("./config");
 const app = express();
-const config = require('./config');
 
-const basic = require('./routes/Basic.route'),
-  error = require('./routes/Error.route'),
-  download = require('./routes/Download.route'),
-  specific = require('./routes/Specific.route'),
-  users = require('./routes/Users.route'),
-  test = require('./routes/Test.route');
+app.set("view engine", "ejs");
 
-/* Joining middleware */
-const apiMiddleware = require('./middleware/api-password.js')
+const usage = [
+  { path: express.static(__dirname + "/public") },
+  { path: express.json() },
 
-/** Install stylesheet ejs */
-app.set('view engine', 'ejs');
+  // Middleware
+  // {path: require('./middleware/api-password')},
 
-/** PORT */
-app.set(config.port);
+  // Routes
+  { path: require("./routes/Test.route") },
+  { path: require("./routes/Basic.route") },
+  { path: require("./routes/Error.route") },
+  { path: require("./routes/Users.route") },
+  { path: require("./routes/Specific.route") },
+  { path: require("./routes/Download.route") },
+];
 
-/** Static */
-app.use(express.static(__dirname + '/public'));
+usage.forEach((item) => {
+  app.use(item.path);
+});
 
-/* Gives us to get JSON data */
-/* app.use(express.urlencoded({extended: true})) */
-app.use(express.json())
-
-/* Middleware */
-/* Password: /?pass=slojno */
-// app.use(apiMiddleware);
-
-/* Routes */
-app.use(basic);
-app.use(users);
-app.use(specific);
-app.use(test);
-app.use(error);
-app.use(download);
-
-/** Server Listening */
-app.listen(config.port,
-  () => {console.log(`\nExpress запущен на http://localhost:${config.port} \nНажмите Ctrl + C для завершения.`);
+app.listen(config.port, () => {
+  console.log(
+    `\nStarted on http://localhost:${config.port}\nUse Ctrl + C to end proccess`
+  );
 });
