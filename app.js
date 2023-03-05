@@ -6,18 +6,20 @@ app.set("view engine", "ejs");
 
 const usage = [
   { path: express.static(__dirname + "/public") },
+  { path: express.urlencoded({ extended: true }), 
+    description: "For calculator with method POST"},
   { path: express.json() },
 
   // Middleware
   // {path: require('./middleware/api-password')},
 
   // Routes
-  { path: require("./routes/Test.route") },
-  { path: require("./routes/Basic.route") },
+  { path: require("./routes/Tools.route") }, 
+  { path: require("./routes/API.route") }, 
+  { path: require("./routes/Basic.route") }, 
+  { path: require("./routes/Users.route") }, 
+  { path: require("./routes/Download.route") }, 
   { path: require("./routes/Error.route") },
-  { path: require("./routes/Users.route") },
-  { path: require("./routes/Specific.route") },
-  { path: require("./routes/Download.route") },
 ];
 
 usage.forEach((item) => {

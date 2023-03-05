@@ -2,10 +2,10 @@
 const express = require('express')
 const router = express.Router()
 const config = require('../config')
-const Method = require('../controllers/Test.controller')
+const Controller = require('../controllers/API.controller')
 
 /* Test */
 
-router.get('/api', Method['/api'].get.callback)
+router.get('/api', Controller['/api'].get.callback)
 
 module.exports = router;

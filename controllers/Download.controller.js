@@ -6,7 +6,9 @@ module.exports = {
       method: 'GET',
       path: '/download',
       callback: (req, res, next) => {
-        res.download(__dirname + '/test.html')
+        res.render('home', {
+          title: 'Download',
+        })
       }
     },
 

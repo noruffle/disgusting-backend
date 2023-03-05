@@ -16,15 +16,18 @@ module.exports = {
       method: 'POST',
       path: '/calc',
       callback: (req, res, next) => {
-        console.log(req.body)
-  
         const num1 = Number(req.body.num1)
         const num2 = Number(req.body.num2)
-        const sum = (a, b) => a + b
-        console.log(num1, num2)
-        const answer = sum(num1, num2)
-        console.log(answer)
-        res.write(`<h1>Your sum is: ${answer}</h1>`)
+        console.log(`First operand: ${num1}\nSecond operand: ${num2}`)
+      
+        function Calculator(...operands) {
+          return operands.reduce((a, b) => a + b, 0);
+        }
+      
+        let result = Calculator(num1, num2)
+        console.log(`Result: ${result}`)
+      
+        res.write(`\nResult: ${result}`)
         res.send()
       }
     },
