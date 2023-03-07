@@ -45,3 +45,5 @@ app.listen(config.port, () => {
     `\nStarted on http://localhost:${config.port}\nUse Ctrl + C to end proccess`
   );
 });
+
+// Merged to TypeScript project
